@@ -120,7 +120,7 @@ python sniffle.py
 
 ### 📄 License
 
-This project is distributed under the MIT license. See the [LICENSE](site) file for details.
+This project is distributed under the MIT license. See the [LICENSE](https://github.com/Bebrowskiy/Sniffle/blob/main/LICENSE) file for details.
 
 ## ✨ Support
 If you like this project, don't forget to leave ⭐ on GitHub! Thank you for using Sniffle!
