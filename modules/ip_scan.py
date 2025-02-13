@@ -18,31 +18,92 @@ def get_ip_info(ip):
 
         output_result = {
             "IP": data.get("ip"),
-            "CONN. TYPE": data.get("connection_type"),
-            "CONTINENT NAME": data.get("continent_name"),
+            "CONNTYPE": data.get("connection_type"),
+            "CONTINENTNAME": data.get("continent_name"),
             "COUNTRY": data.get("country_name_official"),
-            "COUNTRY CODE": data.get("country_code3"),
-            "CALLING CODE": data.get("calling_code"),
-            "COUNTRY TLD": data.get("country_tld"),
+            "COUNTRYCODE": data.get("country_code3"),
+            "CALLINGCODE": data.get("calling_code"),
+            "COUNTRYTLD": data.get("country_tld"),
             "STATE": data.get("state_prov"),
-            "STATE CODE": data.get("state_code"),
+            "STATECODE": data.get("state_code"),
             "DISTRICT": data.get("district"),
             "CITY": data.get("city"),
-            "ZIP CODE": data.get("zipcode"),
+            "ZIPCODE": data.get("zipcode"),
             "LATITUDE": data.get("latitude"),
             "LONGITUDE": data.get("longitude"),
             "ISP": data.get("isp"),
             "ORGANIZATION": data.get("organization"),
-            "TIME ZONE": data.get("time_zone").get("name"),
+            "TIMEZONE": data.get("time_zone").get("name"),
             "OFFSET": data.get("time_zone").get("offset"),
-            "CURRENT TIME": data.get("time_zone").get("current_time"),
-            "CURRENT TIME UNIX": data.get("time_zone").get("current_time_unix"),
+            "CURRENTTIME": data.get("time_zone").get("current_time"),
+            "CURRENTTIMEUNIX": data.get("time_zone").get("current_time_unix"),
             "LOCATION": f"https://www.openstreetmap.org/?mlat={data.get("latitude")}&mlon={data.get("longitude")}"
         }
 
         logging.info(f"Scanning {ip}: {data}")
 
-        return output_result
+        return data
 
     except Exception as e:
         return {"error": {e}}
+
+def main():
+    ip = input("IP: ")
+    data = get_ip_info(ip)
+
+    # Data
+    ipAdd = data.get("ip")
+    conn = data.get("connection_type")
+    continent = data.get("continent_name")
+    country = data.get("country_name_official")
+    countCode = data.get("country_code3")
+    callingCode = data.get("calling_code")
+    countryTLD = data.get("country_tld")
+    state = data.get("state_prov")
+    stateCode = data.get("state_code")
+    district = data.get("district")
+    city = data.get("city")
+    zipCode = data.get("zipcode")
+    latitude = data.get("latitude")
+    longitude = data.get("longitude")
+    isp = data.get("isp")
+    organization = data.get("organization")
+    timeZone = data.get("time_zone").get("name")
+    offset = data.get("time_zone").get("offset")
+    currentTime = data.get("time_zone").get("current_time")
+    location = f"https://www.openstreetmap.org/?mlat={latitude}&mlon={longitude}"
+
+    # Print
+    print("╔═══════════════════ INFO ═══════════════════╗")
+    print(f" {ipAdd}")
+    print("╚════════════════════════════════════════════╝")
+    print("\n")
+    print("╔═══════════════════ GEOLOCATION ═══════════════════╗")
+    print(f" Continent: {continent}")
+    print(f" Country: {country}")
+    print(f" Country Code: {country}")
+    print(f" Calling Code: {callingCode}")
+    print(f" Country TLD: {countryTLD}")
+    print(f" State: {state}")
+    print(f" State Code: {stateCode}")
+    print(f" District: {district}")
+    print(f" City: {city}")
+    print(f" Zip Code: {zipCode}")
+    print(f" Latitude: {latitude}")
+    print(f" Longitude: {longitude}")
+    print("╚═══════════════════════════════════════════════════╝")
+    print("\n")
+    print("╔═══════════════════ CONN. INFO ═══════════════════╗")
+    print(f" ISP: {isp}")
+    print(f" Organization: {organization}")
+    print("╚══════════════════════════════════════════════════╝")
+    print("\n")
+    print("╔══════════════════════════ OTHER ══════════════════════════╗")
+    print(f" Time Zone: {timeZone}")
+    print(f" Offset: {offset}")
+    print(f" Current Time: {currentTime}")
+    print("╚═══════════════════════════════════════════════════════════╝")
+    print("\n")
+    print("╔═══════════════════════════ MAP ═══════════════════════════╗")
+    print(f" {location}")
+    print("╚═══════════════════════════════════════════════════════════╝")

@@ -7,5 +7,8 @@ def get_my_ip():
 
     return data.get("ip")
 
-ip = get_my_ip()
-print(ip)
+def main():
+    ip = get_my_ip()
+    print("╔══════════════════════════╗")
+    print(f"  Your IP: {ip}")
+    print("╚══════════════════════════╝")
