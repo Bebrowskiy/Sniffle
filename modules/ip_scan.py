@@ -48,7 +48,7 @@ def get_ip_info(ip):
         return {"error": {e}}
 
 def main():
-    ip = input("IP: ")
+    ip = input("IP (e.g. 22.111.000.99): ")
     data = get_ip_info(ip)
 
     # Data
