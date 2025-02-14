@@ -1,4 +1,8 @@
 import whois
+import logging
+
+logging.basicConfig(filename="logs/logs.log", level=logging.INFO, format="%(asctime)s - %(message)s")
+
 
 def main():
 
@@ -43,6 +47,7 @@ def main():
 
             output += f"\n Organization: {domain_info.get('org', 'Unknown')}"
 
+            logging.info(f"Scanning {domain}: {domain_info}")
             print(output)
     
 

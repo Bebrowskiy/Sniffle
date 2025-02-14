@@ -12,7 +12,7 @@ from config import IPGEO_API_KEY
 if not os.path.exists("logs"):
     os.makedirs("logs")
 
-logging.basicConfig(filename="logs/ip_scan.log", level=logging.INFO, format="%(asctime)s - %(message)s")
+logging.basicConfig(filename="logs/logs.log", level=logging.INFO, format="%(asctime)s - %(message)s")
 
 def get_ip_info(ip):
 

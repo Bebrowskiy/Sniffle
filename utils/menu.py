@@ -19,13 +19,12 @@ def clear_screen():
 def display_logo():
     # Function for displaying the program logo
     logo = '''
-.oooooo..o              o8o   .o88o.  .o88o.                    
-d8P'    `Y8              `"'   888 `"  888 `"                    
-Y88bo.      ooo. .oo.   oooo  o888oo  o888oo   .ooooo.  oooo d8b 
- `"Y8888o.  `888P"Y88b  `888   888     888    d88' `88b `888""8P 
-     `"Y88b  888   888   888   888     888    888ooo888  888     
-oo     .d8P  888   888   888   888     888    888    .o  888     
-8""88888P'  o888o o888o o888o o888o   o888o   `Y8bod8P' d888b    
+.d8888. d8b   db d888888b d88888b d88888b db      d88888b 
+88'  YP 888o  88   `88'   88'     88'     88      88'     
+`8bo.   88V8o 88    88    88ooo   88ooo   88      88ooooo 
+  `Y8b. 88 V8o88    88    88~~~   88~~~   88      88~~~~~ 
+db   8D 88  V888   .88.   88      88      88booo. 88.     
+`8888Y' VP   V8P Y888888P YP      YP      Y88888P Y88888P 
 '''
     print(logo)
 
