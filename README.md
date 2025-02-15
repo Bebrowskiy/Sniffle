@@ -1,15 +1,17 @@
 # Sniffle 🐾
 
 
-Sniffle is a set of OSINT tools that helps you collect useful information about domains, IP addresses, and other data. It's all gathered in one place with a playful and simple interface.
+Sniffle is a set of OSINT tools designed to help you gather useful information about domains, IP addresses, SSL certificates and more. Everything is gathered in one place with a nice and simple interface.
 
 ---
 
 ## 🚀 Main functions
 
-- **IP Address Verification**: Get information about the location, owner and status of an IP address.
-- **Domain Search**: Find out who registered the domain, its status and other details.
-- **CLI Interface**: Easy user interaction and visual information.
+- **IP Address Check**: Get detailed information about the location, owner, and status of an IP address.
+- **Domain Search**: Discover who registered the domain, its status, and other important details.
+- **SSL Scan**: Check SSL certificate details, including validity, issuer, and more.
+- **Leak Detection**: Search for possible data leaks related to your IP, username or email.
+- **CLI Interface**: Easy and intuitive user interaction with visual output for each module.
 
 ---
 
@@ -18,7 +20,7 @@ Sniffle is a set of OSINT tools that helps you collect useful information about 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/sniffle.git
+git clone https://github.com/Bebrowskiy/Sniffle.git
 cd sniffle
 ```
 
@@ -30,7 +32,7 @@ pip install -r requirements.txt
 
 ### 3. Create a configuration file
 
-Rename the config_template.py file to config.py and fill it with your API keys.
+Rename the `config_template.py` file to `config.py` and fill it with your API keys or other required information.
 
 ## 🧭 How to use?
 
@@ -39,7 +41,7 @@ Rename the config_template.py file to config.py and fill it with your API keys.
 python sniffle.py
 ```
 
-### 2. Select the desired module and follow the instructions
+### 2. Select the desired module and follow the on-screen instructions
 
 ## 🌍 Example output
 
@@ -115,8 +117,16 @@ python sniffle.py
 - Python 3.7+
 - Libraries:
   - `requests`.
-  - `colorama`
+  - `pyOpenSSL`
   - and others specified in `requirements.txt`
+
+## 💡 Features
+
+- **Free APIs**: Sniffle uses **completely free public APIs** to get information. For IP address scanning, we use a reliable [service](https://ipgeolocation.io/pricing.html) that offers a free plan that provides effective results at no cost.
+- **Open Source & Free**: Sniffle is fully open source and free to use. You can contribute to its development or customize it to suit your needs.
+- **Cute & Engaging Design**: The interface is designed to be simple, yet fun, making the experience of using Sniffle more enjoyable. The program's "sniffing" theme adds a playful touch to OSINT.
+- **Detailed Outputs**: Get clear, structured results with helpful explanations of the data you're viewing.
+- **Cross-Platform**: Sniffle is compatible with all major operating systems, including Windows, Linux, and macOS, providing versatility for users.
 
 ### 📄 License
 
