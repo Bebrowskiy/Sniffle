@@ -20,12 +20,12 @@ def main():
             break
 
         display_main_menu(modules)
-        choice = input("Choose option (1-{}): ".format(len(modules) + 1))
+        choice = input("\033[1;33mChoose option (1-{}): \033[0m".format(len(modules) + 1))  # Желтый цвет для подсказки
 
         if choice.isdigit():
             choice = int(choice)
             if choice == len(modules) + 1:
-                print("The smell of finished work - out for a break!")
+                print("\033[1;32mThe smell of finished work - out for a break!\033[0m")  # Зеленый цвет для завершения
                 break
             elif 1 <= choice <= len(modules):
                 selected_module = list(modules.values())[choice - 1]
@@ -34,9 +34,9 @@ def main():
                 selected_module.main()
                 print("\n\n\n")
             else:
-                print("Nose didn't smell the right choice! Try again!")
+                print("\033[1;31mNose didn't smell the right choice! Try again!\033[0m")  # Красный цвет для ошибки
         else:
-            print("Nose didn't smell the right choice! Try again!")
+            print("\033[1;31mNose didn't smell the right choice! Try again!\033[0m")  # Красный цвет для ошибки
 
 if __name__ == "__main__":
     main()
