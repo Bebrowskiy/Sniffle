@@ -10,7 +10,8 @@ Sniffle is a set of OSINT tools designed to help you gather useful information a
 - **IP Address Check**: Get detailed information about the location, owner, and status of an IP address.
 - **Domain Search**: Discover who registered the domain, its status, and other important details.
 - **SSL Scan**: Check SSL certificate details, including validity, issuer, and more.
-- **Leak Detection**: Search for possible data leaks related to your IP, username or email.
+- **Email Search**: Checks if there is an account using the entered mail on such sites as *twitter, rambler, pinterest and others*.
+- **Username Search**: Checks if there is an account using the entered username on different sites.
 - **CLI Interface**: Easy and intuitive user interaction with visual output for each module.
 
 ---

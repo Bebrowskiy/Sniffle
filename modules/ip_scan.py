@@ -22,7 +22,7 @@ def get_ip_info(ip):
         response = requests.get(f"https://api.ipgeolocation.io/ipgeo?apiKey={IPGEO_API_KEY}&ip={ip}")
         data = response.json()
 
-        # Логирование полученных данных
+        # Logging of received data
         logging.info(f"Scanning {ip}: {data}")
         return data
 
