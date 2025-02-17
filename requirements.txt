@@ -3,3 +3,4 @@ python-whois
 pyOpenSSL
 holehe
 sherlock-project
+deepface

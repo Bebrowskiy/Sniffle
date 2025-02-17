@@ -30,9 +30,9 @@ def main():
             elif 1 <= choice <= len(modules):
                 selected_module = list(modules.values())[choice - 1]
                 # Let's call the main module method (must be implemented in every module)
-                print("\n\n\n")
+                clear_screen()
                 selected_module.main()
-                print("\n\n\n")
+                print("\n")
             else:
                 print("\033[1;31mNose didn't smell the right choice! Try again!\033[0m")  # Красный цвет для ошибки
         else:
